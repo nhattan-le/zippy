@@ -1,0 +1,27 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Location</title> 
+</head> 
+<body> 
+   <form action="/" method="POST"> 
+        <label>Enter your zipcode:</label> 
+        <input type="text" name="zipcode" required /> 
+        <br> 
+        <input type="submit" value="Submit">
+    </form> 
+    <br><br> 
+    DATA RECEIVED: 
+    <br> 
+    {{zipcode}} 
+    <br><br>
+    <ol> 
+        <!-- For loop logic of jinja template -->
+        {%for key in findCity%} 
+
+            <h1>{{key}} --- {{findCity[key]}}</h1> 
+
+        {%endfor%} 
+    </ol> 
+</body> 
+</html>
